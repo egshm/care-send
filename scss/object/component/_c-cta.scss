@@ -1,0 +1,40 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	c-cta
+----------------------------------------*/
+.c-cta {
+  padding: 40px 0;
+  background-image: url('../images/cta-bg_sp.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-weight: 700;
+  text-align: center;
+}
+
+.c-cta__title {
+  color: var(--c_white);
+  font-size: var(--fz_24);
+  line-height: 1.8;
+}
+
+.c-cta__btn {
+  margin-top: 39px;
+  padding: 16px 50px;
+  background: var(--c_white);
+  border-radius: 25px;
+  color: var(--c_main);
+  font-size: var(--fz_20);
+  @include fwd.hover-opacity();
+}
+
+.c-cta__btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--c_text);
+}
+
+@media (min-width: 992px) {
+  .c-cta {
+    background-image: url('../images/cta-bg.png');
+  }
+}

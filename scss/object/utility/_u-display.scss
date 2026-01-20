@@ -1,0 +1,22 @@
+/*----------------------------------------
+	break
+----------------------------------------*/
+// タブレット幅以下で表示
+.u-only-md {
+  display: block !important;
+}
+
+// PC幅で表示
+.u-only-lg {
+  display: none !important;
+}
+
+@media (min-width: 1024px) {
+  .u-only-md {
+    display: none !important;
+  }
+
+  .u-only-lg {
+    display: block !important;
+  }
+}

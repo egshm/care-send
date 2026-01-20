@@ -1,0 +1,28 @@
+@use "../foundation/forward" as fwd;
+
+/*----------------------------------------
+	l-footer
+----------------------------------------*/
+.l-footer {
+  padding: 24px 0;
+  background: var(--c_white);
+  text-align: center;
+}
+
+.l-footer__logo {
+  width: 227px;
+  margin: 0 auto;
+}
+
+.l-footer__copyright {
+  display: inline-block;
+  margin-top: 37px;
+  font-size: var(--fz_12);
+  font-family: var(--font_gold);
+}
+
+@media (min-width: 768px) {
+  .l-footer {
+    padding: 26px 0 18px;
+  }
+}

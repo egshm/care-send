@@ -1,0 +1,97 @@
+@use "../foundation/forward" as fwd;
+
+/*----------------------------------------
+	l-header
+----------------------------------------*/
+.l-header {
+  // variable
+  --h_hdr: 64px; // ヘッダー高さ
+
+  // style
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--c_white);
+  z-index: 999;
+}
+
+.l-header__inner {
+  display: flex;
+  align-items: center;
+  height: var(--h_hdr);
+  padding-left: 16px;
+}
+
+.l-header__logo {
+  width: 139px;
+  flex-shrink: 0;
+}
+
+.l-header__gnav {
+  display: none; // スマホ時は表示しない
+}
+
+.l-header__doc-btn {
+  width: var(--h_hdr);
+  height: 100%;
+  margin-left: auto;
+}
+
+.l-header__hamburger {
+  width: var(--h_hdr);
+  height: 100%;
+}
+
+.l-header__spmenu {
+  position: fixed;
+  top: var(--h_hdr);
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.l-header__spmenu[aria-hidden="false"] {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (min-width: 992px) {
+  .l-header {
+    --h_hdr: 96px;
+  }
+
+  .l-header__inner {
+    padding-left: 20px;
+  }
+
+  .l-header__logo {
+    width: 183px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .l-header__gnav {
+    display: block; // PC用メニューを表示
+    margin-left: auto;
+  }
+
+  .l-header__spmenu {
+    display: none; // スマホ用メニューを非表示
+  }
+
+  .l-header__hamburger {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .l-header__logo {
+    width: 227px;
+  }
+
+  .l-header__doc-btn {
+    width: 189px;
+  }
+}

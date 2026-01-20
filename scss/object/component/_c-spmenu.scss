@@ -1,0 +1,40 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	c-spmenu
+----------------------------------------*/
+.c-spmenu {
+  background: var(--c_mask);
+  transition: 0.3s;
+}
+
+.c-spmenu__list {
+  max-width: 375px;
+  height: 100%;
+  margin-left: auto;
+  background: var(--c_bg);
+}
+
+.c-spmenu__item {
+  border-bottom: 1px solid var(--c_white);
+}
+
+.c-spmenu__link {
+  width: 100%;
+  padding: 24px 0 24px 16px;
+  color: var(--c_white);
+  font-weight: 700;
+  @include fwd.hover-opacity();
+}
+
+// アイコン付きリンク
+.c-spmenu__link--icon {
+  display: flex;
+  align-items: center; // アイコンとテキストを天地中央揃え
+}
+
+.c-spmenu__img {
+  display: inline-block;
+  width: 24px;
+  margin-right: 0.75em;
+}

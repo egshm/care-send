@@ -1,0 +1,60 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-about
+----------------------------------------*/
+.p-about__text {
+  margin-top: 63px;
+  font-size: var(--fz_20);
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.p-about__text-keyword {
+  color: var(--c_main);
+  font-size: var(--fz_24);
+}
+
+.p-about__img-wrap {
+  position: relative;
+  width: calc((315 / 375) * 100%);
+  margin: 54px auto 0;
+}
+
+.p-about__img-wrap::before {
+  content: '';
+  --c_bg: #F9F9F9;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: calc((345 / 375) * 100vw);
+  height: 100%;
+  background: var(--c_bg);
+  border-radius: 5px;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .p-about__text {
+    margin-top: 51px;
+    font-size: var(--fz_24);
+  }
+
+  .p-about__text-keyword {
+    font-size: var(--fz_32);
+  }
+
+  .p-about__img-wrap {
+    width: 562px;
+    margin-top: 25px;
+  }
+
+  .p-about__img-wrap::before {
+    top: 50%;
+    max-width: 808px;
+    height: calc((276 / 316) * 100%);
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,53 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	c-diag-rounded-card
+----------------------------------------*/
+.c-diag-rounded-card {
+  display: grid;
+  gap: 24px;
+  padding: 31px 10px 20px;
+  border-radius: 30px 0 30px 0;
+  box-shadow: 0 5px 8px 3px rgba(51, 51, 51, 0.25);
+  line-height: 1.8;
+}
+
+// Slickスライダー使用時もGridレイアウトを適用
+.c-diag-rounded-card.slick-slide {
+  display: grid;
+}
+
+.c-diag-rounded-card__title {
+  font-size: var(--fz_18);
+  font-weight: 700;
+}
+
+.c-diag-rounded-card__text {
+  font-size: var(--fz_12);
+}
+
+.c-diag-rounded-card__img-wrap {
+  margin-top: 24px;
+}
+
+.c-diag-rounded-card__img {
+  width: auto; // マークアップ側のwidth属性を効かせる
+}
+
+.c-diag-rounded-card__keyword {
+  color: var(--c_main);
+}
+
+@media (min-width: 992px) {
+  .c-diag-rounded-card__title {
+    font-size: var(--fz_24);
+  }
+
+  .c-diag-rounded-card__text {
+    font-size: var(--fz_14);
+  }
+
+  .c-diag-rounded-card__img-wrap {
+    margin-top: 13px;
+  }
+}

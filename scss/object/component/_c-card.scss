@@ -1,0 +1,29 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	c-card
+----------------------------------------*/
+.c-card {
+  display: grid;
+  gap: 19px;
+  padding: 14px 30px 22px;
+  border: 1px solid var(--c_main);
+}
+
+.c-card__img-wrap {
+  width: 116px;
+  margin: 0 auto;
+}
+
+.c-card__title {
+  --c_text: #F47500;
+  color: var(--c_text);
+  font-size: var(--fz_20);
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.c-card__text {
+  line-height: 1.8;
+}

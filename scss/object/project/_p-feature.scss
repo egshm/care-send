@@ -1,0 +1,29 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-feature
+----------------------------------------*/
+.p-feature__list {
+  display: grid;
+  gap: 24px;
+  margin-top: 51px;
+}
+
+.p-feature__item {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .p-feature__list {
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+  }
+
+  .p-feature__item {
+    grid-row: span 3; //子グリッドの高さを4グリッド(img,title,text)分に設定
+    grid-template-rows: subgrid; //subgrid化
+    width: auto;
+    margin: 0;
+  }
+}

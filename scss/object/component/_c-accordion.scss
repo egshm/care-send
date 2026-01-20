@@ -1,0 +1,144 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	c-accordion
+----------------------------------------*/
+.c-accordion {
+  --border-radius: 10px;
+  --duration-time: 0.4s;
+  --indent: 1em;
+  background: var(--c_white);
+  border-radius: var(--border-radius);
+  font-size: var(--fz_14);
+}
+
+// アコーディオンオープン時
+.c-accordion[open] .c-accordion__summary {
+  background: var(--c_main);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  color: var(--c_white);
+}
+
+// Qアイコン
+.c-accordion[open] .c-accordion__icon {
+  background: var(--c_white);
+  color: var(--c_main);
+}
+
+.c-accordion__summary {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-right: 34px;
+  padding-left: 10px;
+  min-height: 64px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 1.5;
+  list-style-type: none;
+  transition:
+    background-color var(--duration-time),
+    color var(--duration-time);
+}
+
+.c-accordion__summary:focus-visible {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+// Safariで表示されるデフォルト三角形アイコンをクリア
+.c-accordion__summary::-webkit-details-marker {
+  display: none;
+}
+
+// 開閉ボタン
+.c-accordion__summary::before,
+.c-accordion__summary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  width: 16px;
+  height: 2px;
+  margin: auto 0;
+  background: currentColor;
+}
+
+// 開閉ボタン（縦棒）
+.c-accordion__summary::after {
+  transform: rotate(90deg);
+}
+
+// Qアイコン
+.c-accordion__icon {
+  display: grid;
+  place-content: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  background: var(--c_main);
+  border-radius: 50%;
+  color: var(--c_white);
+  font-family: var(--font_gold);
+  font-size: var(--fz_16);
+  font-weight: 400;
+  transition:
+    background-color var(--duration-time),
+    color var(--duration-time);
+}
+
+.c-accordion__content-wrap {
+  padding: 10px;
+}
+
+.c-accordion__content {
+  counter-reset: cnt; // 要素ごとに箇条書き番号をリセット
+  overflow: hidden;
+  line-height: 1.8;
+}
+
+// コンテンツの箇条書き
+.c-accordion__item {
+  position: relative;
+  padding-left: var(--indent);
+  counter-increment: cnt; // 箇条書き番号をインクリメント
+}
+
+.c-accordion__item::before {
+  content: ''counter(cnt)'.'; // 箇条書き番号を表示
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media (min-width: 992px) {
+  .c-accordion {
+    font-size: var(--fz_16);
+  }
+
+  .c-accordion__summary {
+    min-height: 80px;
+    padding-right: 64px;
+    padding-left: 36px;
+  }
+
+  // 開閉ボタン
+  .c-accordion__summary::before,
+  .c-accordion__summary::after {
+    right: 24px;
+    width: 32px;
+  }
+
+  .c-accordion__icon {
+    width: 44px;
+    height: 44px;
+    margin-right: 24px;
+    font-size: var(--fz_32);
+  }
+
+  .c-accordion__content-wrap {
+    padding: 24px 32px;
+  }
+}

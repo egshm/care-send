@@ -1,0 +1,77 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-case
+----------------------------------------*/
+.p-case {
+  --slide-num: 1; // スライド表示枚数
+  --slide-width: 311px; // スライド幅
+  --slide-margin-x: 17px; // Xマージン
+  --slide-margin-y: 20px; // Yマージン
+  padding-top: 72px;
+}
+
+.p-case__slide-wrap {
+  position: relative;
+  width: calc((var(--slide-width) + (var(--slide-margin-x) * 2)) * var(--slide-num));
+  max-width: 100%;
+  margin-top: calc(57px - var(--slide-margin-y));
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: calc(45px - var(--slide-margin-y));
+}
+
+.p-case__slide-item {
+  min-height: 471px;
+  margin: var(--slide-margin-y) var(--slide-margin-x);
+}
+
+.p-case__slide-arrow {
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  transform: translateY(-50%);
+  z-index: 1; // ボタンを前面に配置（別の要素に隠れて押せなくなることを防ぐ）
+  @include fwd.hover-opacity();
+}
+
+.p-case__slide-arrow--left {
+  left: -10px;
+}
+
+.p-case__slide-arrow--right {
+  right: -10px;
+}
+
+@media (min-width: 768px) {
+  .p-case {
+    --slide-num: 2; // スライドを2枚表示に切り替え
+  }
+
+  .p-case__slide-arrow {
+    width: 34px;
+  }
+
+  .p-case__slide-arrow--left {
+    left: -30px;
+  }
+
+  .p-case__slide-arrow--right {
+    right: -30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .p-case {
+    --slide-width: 405px;
+  }
+
+  .p-case__slide-wrap {
+    margin-top: calc(73px - var(--slide-margin-y));
+    padding-bottom: calc(55px - var(--slide-margin-y));
+  }
+
+  .p-case__slide-item {
+    min-height: 488px;
+  }
+}
