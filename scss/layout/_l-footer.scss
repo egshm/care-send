@@ -4,14 +4,16 @@
 	l-footer
 ----------------------------------------*/
 .l-footer {
-  padding: 24px 0;
+  padding-top: 24px;
+  padding-bottom: 24px;
   background: var(--c_white);
   text-align: center;
 }
 
 .l-footer__logo {
   width: 227px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .l-footer__copyright {
@@ -23,6 +25,7 @@
 
 @media (min-width: 768px) {
   .l-footer {
-    padding: 26px 0 18px;
+    padding-top: 26px;
+    padding-bottom: 18px;
   }
 }

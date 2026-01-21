@@ -11,7 +11,8 @@
 .p-cost__inner {
   width: calc((345 / 375) * 100%);
   max-width: calc(296px * 3 + 12px * 2);
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .p-cost__list {

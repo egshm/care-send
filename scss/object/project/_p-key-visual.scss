@@ -9,8 +9,10 @@
 
 .p-key-visual__inner {
   width: calc((345 / 375) * 100%);
-  margin: 0 auto;
-  padding: 40px 0 26px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 40px;
+  padding-bottom: 26px;
   color: var(--c_white);
   line-height: 1.5;
   text-align: center;
@@ -66,7 +68,9 @@
 
 .p-key-visual__notes {
   width: calc((112 * 3 + 4 * 2) * 1px);
-  margin: 24px auto 0;
+  margin-top: 24px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .p-key-visual__note {
@@ -83,13 +87,16 @@
 
 .p-key-visual__img-wrap {
   width: 360px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .p-key-visual__form {
   width: 100%;
   max-width: 345px;
-  margin: 44px auto 0;
+  margin-top: 44px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media (min-width: 768px) {
@@ -113,7 +120,8 @@
 
 @media (min-width: 992px) {
   .p-key-visual__inner {
-    padding: 84px 0;
+    padding-top: 84px;
+    padding-bottom: 84px;
   }
 
   .p-key-visual__notes {

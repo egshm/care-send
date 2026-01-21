@@ -21,7 +21,9 @@
 
 .c-spmenu__link {
   width: 100%;
-  padding: 24px 0 24px 16px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 16px;
   color: var(--c_white);
   font-weight: 700;
   @include fwd.hover-opacity();

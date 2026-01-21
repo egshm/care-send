@@ -4,17 +4,20 @@
 	l-section
 ----------------------------------------*/
 .l-section {
-  padding: 40px 0 36px;
+  padding-top: 40px;
+  padding-bottom: 36px;
 }
 
 .l-section__inner {
   width: calc((345 / 375) * 100%);
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media (min-width: 768px) {
   .l-section {
-    padding: 80px 0 48px;
+    padding-top: 80px;
+    padding-bottom: 48px;
   }
 }
 
