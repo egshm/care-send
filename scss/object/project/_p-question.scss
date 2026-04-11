@@ -1,0 +1,33 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-question
+----------------------------------------*/
+.p-question {
+  --c_bg: #F9F9F9;
+  background: var(--c_bg);
+}
+
+.p-question__accordion:first-of-type {
+  margin-top: 48px;
+}
+
+.p-question__accordion + .p-question__accordion {
+  margin-top: 16px;
+}
+
+@media (min-width: 768px) {
+  .p-question {
+    padding-bottom: 72px !important; // .l-section要素のパディングを上書き
+  }
+}
+
+@media (min-width: 992px) {
+  .p-question__accordion:first-of-type {
+    margin-top: 70px;
+  }
+
+  .p-question__accordion + .p-question__accordion {
+    margin-top: 24px;
+  }
+}

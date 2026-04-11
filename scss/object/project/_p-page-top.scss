@@ -1,0 +1,14 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	p-page-top
+----------------------------------------*/
+.p-page-top__key-visual {
+  margin-top: 64px;
+}
+
+@media (min-width: 992px) {
+  .p-page-top__key-visual {
+    margin-top: 96px;
+  }
+}

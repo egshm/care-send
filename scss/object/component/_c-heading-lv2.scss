@@ -1,0 +1,17 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	c-heading-lv2
+----------------------------------------*/
+.c-heading-lv2 {
+  font-size: var(--fz_24);
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .c-heading-lv2 {
+    font-size: var(--fz_32);
+  }
+}

@@ -1,0 +1,19 @@
+///
+/// @mixin hover-opacity
+/// 
+/// ホバー可能な要素に、透過のホバーエフェクトを適用します。
+/// 
+/// @param {Number} $opacity - 不透明度（0~1）
+/// @param {Time} $transition-time - トランジション時間
+/// 
+@mixin hover-opacity($opacity: 0.7, $transition-time: 0.3s) {
+
+  transition: opacity $transition-time;
+
+  // ホバー時
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: $opacity;
+    }
+  }
+}

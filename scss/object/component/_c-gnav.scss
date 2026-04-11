@@ -1,0 +1,18 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	c-gnav
+----------------------------------------*/
+.c-gnav__list {
+  display: flex;
+}
+
+.c-gnav__item + .c-gnav__item {
+  margin-left: 28px;
+}
+
+.c-gnav__link {
+  color: var(--c_main);
+  font-weight: 700;
+  @include fwd.hover-opacity();
+}

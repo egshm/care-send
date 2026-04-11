@@ -1,0 +1,29 @@
+@use "../foundation/forward" as fwd;
+
+/*----------------------------------------
+	l-section
+----------------------------------------*/
+.l-section {
+  padding-top: 40px;
+  padding-bottom: 36px;
+}
+
+.l-section__inner {
+  width: calc((345 / 375) * 100%);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .l-section {
+    padding-top: 80px;
+    padding-bottom: 48px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .l-section__inner {
+    width: calc((1024 / 1440) * 100%);
+    max-width: 1024px;
+  }
+}

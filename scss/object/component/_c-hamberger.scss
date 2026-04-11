@@ -1,0 +1,71 @@
+@use "../../foundation/forward" as fwd;
+
+/*----------------------------------------
+	c-hamburger
+----------------------------------------*/
+.c-hamburger {
+  --c_bg: #333333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 23px;
+  background: var(--c_bg);
+  color: var(--c_white);
+  font-size: var(--fz_10);
+  @include fwd.hover-opacity();
+}
+
+.c-hamburger[aria-expanded="true"] .c-hamburger__line::after {
+  transform: rotate(-45deg);
+}
+
+.c-hamburger[aria-expanded="true"] .c-hamburger__line {
+  background: transparent;
+}
+
+.c-hamburger[aria-expanded="true"] .c-hamburger__line::before {
+  transform: rotate(45deg);
+}
+
+.c-hamburger__line {
+  position: relative;
+  width: 32px;
+  height: 1px;
+  background: currentColor;
+  transition: 0.3s;
+}
+
+.c-hamburger__line::after,
+.c-hamburger__line::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #FFF;
+  transition: 0.3s;
+}
+
+.c-hamburger__line::after {
+  transform: translateY(9px);
+}
+
+.c-hamburger__line::before {
+  transform: translateY(-9px);
+}
+
+.c-hamburger__text {
+  margin-top: 17px;
+}
+
+@media (min-width: 992px) {
+  .c-hamburger {
+    padding-top: 35px;
+  }
+
+  .c-hamburger__text {
+    margin-top: 23px;
+    font-size: var(--fz_14);
+    font-weight: 700;
+  }
+}
