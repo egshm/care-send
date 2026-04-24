@@ -51,14 +51,21 @@
   margin-top: 25px;
 }
 
-.c-form__item {
+.c-form__item + .c-form__item {
   margin-top: 15px;
+}
+
+.c-form__item {
   text-align: left;
 }
 
 .c-form__item--column2 {
   display: flex;
-  gap: calc((9 / 327) * 100%);
+  justify-content: space-between;
+}
+
+.c-form__item--column2 .c-form__item-column {
+  width: calc((159 / 327) * 100%);
 }
 
 .c-form__item-title {
