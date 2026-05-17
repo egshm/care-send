@@ -31,6 +31,11 @@
   @include fwd.hover-opacity();
 }
 
+.c-spmenu__link:focus-visible {
+  border-radius: 0;
+  outline-offset: -2px;
+}
+
 // アイコン付きリンク
 .c-spmenu__link--icon {
   display: flex;

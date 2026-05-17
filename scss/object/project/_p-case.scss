@@ -36,6 +36,10 @@
   @include fwd.hover-opacity();
 }
 
+.p-case__slide-arrow:focus-visible {
+  border-radius: 50%;
+}
+
 .p-case__slide-arrow--left {
   left: -10px;
 }

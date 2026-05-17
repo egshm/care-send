@@ -15,6 +15,10 @@
   @include fwd.hover-opacity();
 }
 
+.c-hamburger:focus-visible {
+  outline-offset: -2px;
+}
+
 .c-hamburger[aria-expanded="true"] .c-hamburger__line::after {
   transform: rotate(-45deg);
 }

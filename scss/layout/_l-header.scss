@@ -37,6 +37,10 @@
   margin-left: auto;
 }
 
+.l-header__doc-btn:focus-visible {
+  outline-offset: -2px;
+}
+
 .l-header__hamburger {
   position: relative;
   width: var(--h_hdr);

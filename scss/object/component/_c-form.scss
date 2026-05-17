@@ -127,6 +127,10 @@
   -moz-user-select: none;
 }
 
+.c-form__btn:focus-visible {
+  border-radius: 25px;
+}
+
 // 送信ボタン有効時
 .c-form__btn.is-active {
   background: var(--c_main);
